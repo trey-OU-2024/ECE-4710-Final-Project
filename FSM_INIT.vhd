@@ -3,12 +3,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 use ieee.std_logic_unsigned.all;
 
 entity FSM_INIT is
-	port (clock, resetn, s, so,zC,zC1,zQ,fall_edge,zD1,zD2,compare, zD3, zD4 : in std_logic; 
-	      LR,ER,EC,EQ,ED1,ED2,EC1,ER1,k_line, Etest, ED3, ED4, state6 : out std_logic);
+	port (clock, resetn, s, so,zC,zC1,zQ,fall_edge,zD1,zD2,compare : in std_logic; 
+	      LR,ER,EC,EQ,ED1,ED2,EC1,ER1,k_line : out std_logic);
 end FSM_INIT;
 
 architecture behaviour of FSM_INIT is
-	type state is (S1, S2, S3, S4, S5, S5b, S5c, S6, S7, S8, S9, S10, S10b, S11, S12, S13, S14, S14b, S14c, S15, S16, S17, S18);
+	type state is (S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18);
 	signal y: state;
 	
 
@@ -35,11 +35,7 @@ begin
 				    else y <= S4; 
 				    end if;
 				when S5 => 
-				    if zC = '1' then y <= S5b; else y <= S5; end if;
-			    when S5b => 
-			        if zD3 = '1' then y <= S5c; else y <= S5b; end if;
-			    when S5c => 
-			        if zD3 = '1' then y <= S6; else y <= S5c; end if;
+				    if zC = '1' then y <= S6; else y <= S5; end if;			        
 				when S6 =>
 				    if fall_edge = '1' then y <= S7; else y <= S6; end if;
 				when S7 => 
@@ -53,9 +49,7 @@ begin
 			    when S9 =>
 			         if zC1 = '1' then y <= S10; else y <= S9; end if;        
 				when S10 => 
-				    if compare = '1' then y <= S11; else y <= S6; end if;
-				when S10b => 
-			        if zD4 = '1' then y <= S11; else y <= S10b; end if;    
+				    if compare = '1' then y <= S11; else y <= S6; end if;    
 				when S11 => 
 				    if zD2 = '1' then y <= S12; else y <= S11; end if; 
 				when S12 => 
@@ -66,11 +60,7 @@ begin
 				        else y <= S13; end if;
 				    else y <= S13; end if;
 				when S14 => 
-				    if zC1 = '1' then y <= S14b; else y <= S14; end if;
-				when S14b => 
-			        if zD3 = '1' then y <= S14c; else y <= S14b; end if;
-			    when S14c => 
-			        if zD3 = '1' then y <= S15; else y <= S14c; end if;    
+				    if zC1 = '1' then y <= S15; else y <= S14; end if;				   
 				when S15 =>
 				    if fall_edge = '1' then y <= S16; else y <= S15; end if;
 				when S16 => 
@@ -87,9 +77,9 @@ begin
 		end if;		
 	end process;
 	
-	Outputs: process (y,s,zC,zQ,zD1,zC1,compare, zD2, zD3, zD4, so)
+	Outputs: process (y,s,zC,zQ,zD1,zC1,compare, zD2, so)
 	begin
-	k_line <= '0'; LR <= '0'; ER <= '0'; EC <= '0'; EQ <= '0'; ED1 <= '0'; ED2 <= '0'; EC1 <= '0'; ER1 <= '0'; ED3 <= '0'; ED4 <= '0'; Etest <= '0'; state6 <= '0';
+	k_line <= '0'; LR <= '0'; ER <= '0'; EC <= '0'; EQ <= '0'; ED1 <= '0'; ED2 <= '0'; EC1 <= '0'; ER1 <= '0';
     case y is
        when S1 => k_line <= '1';  
             when S2 => k_line <= '1';
@@ -104,15 +94,11 @@ begin
                 end if;
             when S5 => k_line <= '1';
                 if zC = '1' then EC <= '1'; else EC <= '1'; end if;
-            when S5b => k_line <= '1';
-                if zD3 = '1' then ED3 <= '1'; else ED3 <= '1'; end if;
-            when S5c => k_line <= '1';
-                if zD3 = '1' then ED3 <= '1'; else ED3 <= '1'; end if;
-            when S6 => k_line <= '1'; state6 <= '1';
+            when S6 => k_line <= '1';
             when S7 => k_line <= '1';
                 if zD1 = '1' then ED1 <= '1'; else ED1 <= '1'; end if;
             when S8 => k_line <= '1'; 
-                if zC1 = '1' then ER <= '1'; LR <= '0'; EC1 <= '1'; Etest <= '1';
+                if zC1 = '1' then ER <= '1'; LR <= '0'; EC1 <= '1'; 
                     if zQ = '1' then EQ <= '1'; 
                     else EQ <= '1'; end if;
                 else EC1 <= '1'; 
@@ -120,9 +106,7 @@ begin
             when S9 => k_line <= '1';
                  if zC1 = '1' then EC1 <= '1'; else EC1 <= '1'; end if;        
             when S10 => k_line <= '1';
-                if compare = '0' then ER1 <= '1'; end if;
-           when S10b => k_line <= '1';
-                if zD4 = '1' then ED4 <= '1'; else ED4 <= '1'; end if; 
+                if compare = '0' then ER1 <= '1'; end if; 
             when S11 => k_line <= '1';
                 if zD2 = '1' then ED2 <= '1'; else ED2 <= '1'; end if; 
             when S12 => k_line <= '0';
@@ -133,11 +117,7 @@ begin
                     else EQ <= '1'; end if;
                 else EC1 <= '1'; end if;
             when S14 => k_line <= '1';
-                if zC1 = '1' then EC1 <= '1'; else EC1 <= '1'; end if;
-             when S14b => k_line <= '1';
-                if zD3 = '1' then ED3 <= '1'; else ED3 <= '1'; end if;
-            when S14c => k_line <= '1';
-                if zD3 = '1' then ED3 <= '1'; else ED3 <= '1'; end if;    
+                if zC1 = '1' then EC1 <= '1'; else EC1 <= '1'; end if; 
             when S15 => k_line <= '1';
             when S16 => k_line <= '1';
                 if zD1 = '1' then ED1 <= '1'; else ED1 <= '1'; end if;

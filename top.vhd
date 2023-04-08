@@ -8,14 +8,13 @@ use ieee.math_real.ceil;
 
 entity top is
   Port (clock, resetn, s, k_in : in std_logic;
-  test : out std_logic_vector(7 downto 0);
         compare_LED,k_out, state6 : out std_logic);
 end top;
 
 architecture Behavioral of top is
 component FSM_INIT is
-	port (clock, resetn, s, so,zC,zC1,zQ,fall_edge,zD1,zD2,compare, zD3, zD4 : in std_logic; 
-	      LR,ER,EC,EQ,ED1,ED2,EC1,ER1,k_line, Etest, ED3, ED4, state6 : out std_logic);
+	port (clock, resetn, s, so,zC,zC1,zQ,fall_edge,zD1,zD2,compare : in std_logic; 
+	      LR,ER,EC,EQ,ED1,ED2,EC1,ER1,k_line : out std_logic);
 end component;
 component my_genpulse_sclr is
 	--generic (COUNT: INTEGER:= (10**8)/2); -- (10**8)/2 cycles of T = 10 ns --> 0.5 s
@@ -44,12 +43,12 @@ component my_rege is
 			 D: in std_logic_vector (N-1 downto 0);
 	       Q: out std_logic_vector (N-1 downto 0));
 end component;
-signal EQ,ZQ,EC,EC1,zC,zC1,ED1,ED2,zD1,zD2,so_1,LR,ER,ER1,compare,fall_edge,so, Etest, ED3, ED4, ZD3, ZD4: std_logic;
+signal EQ,ZQ,EC,EC1,zC,zC1,ED1,ED2,zD1,zD2,so_1,LR,ER,ER1,compare,fall_edge,so: std_logic;
 signal Q_1,Q_2,compare_vector,compare_LED_vector : std_logic_vector(7 downto 0);
 begin
 so <= not(so_1);
 FSM: FSM_INIT port map(clock=>clock,resetn=>resetn,s=>s,so=>so,zC=>zC,zC1=>zC1,zQ=>zQ,fall_edge=>fall_edge,zD1=>zD1,zD2=>zD2,compare=>compare,
-                       LR=>LR,ER=>ER,EC=>EC,EQ=>EQ,ED1=>ED1,ED2=>ED2,EC1=>EC1,ER1=>ER1,k_line=>k_out, Etest => Etest, ED3 => ED3, ED4 => ED4, zD3 => ZD3, zD4 => ZD4, state6 => state6);
+                       LR=>LR,ER=>ER,EC=>EC,EQ=>EQ,ED1=>ED1,ED2=>ED2,EC1=>EC1,ER1=>ER1,k_line=>k_out);
 COUNT0: my_genpulse_sclr generic map(COUNT=>8)
     port map(clock=>clock,resetn=>resetn,E=>EQ,sclr=>'0',Q=>open,z=>zQ);
 COUNT1: my_genpulse_sclr generic map(COUNT=>20000000)
@@ -58,12 +57,9 @@ COUNT2: my_genpulse_sclr generic map(COUNT=>9615)
     port map(clock=>clock,resetn=>resetn,E=>EC1,sclr=>'0',Q=>open,z=>zC1);
 COUNT3: my_genpulse_sclr generic map(COUNT=>4808)
     port map(clock=>clock,resetn=>resetn,E=>ED1,sclr=>'0',Q=>open,z=>zD1);
+    
 COUNT4: my_genpulse_sclr generic map(COUNT=>1000000)
     port map(clock=>clock,resetn=>resetn,E=>ED2,sclr=>'0',Q=>open,z=>zD2);
-COUNT5: my_genpulse_sclr generic map(COUNT=>499999)
-    port map(clock=>clock,resetn=>resetn,E=>ED3,sclr=>'0',Q=>open,z=>zD3);
-COUNT6: my_genpulse_sclr generic map(COUNT=>1999999)
-    port map(clock=>clock,resetn=>resetn,E=>ED4,sclr=>'0',Q=>open,z=>zD4);
         
 SHIFTREG: my_pashiftreg_sclr generic map(N=>8,DIR=>"RIGHT")
     port map(clock=>clock,resetn=>resetn,din=>k_in,E=>ER,sclr=>'0',s_l=>LR,D=>"11001100",Q=>Q_1,shiftout=>so_1);
@@ -75,12 +71,8 @@ REG: my_rege generic map(N=>8)
 compare_vector <= Q_2 xnor Q_1;
 compare <= compare_vector(0) and compare_vector(1) and compare_vector(2) and compare_vector(3) and compare_vector(4) and compare_vector(5) and compare_vector(6) and compare_vector(7);    
 
-compare_LED_vector <= "11001100" xnor Q_1;
+compare_LED_vector <= "00110011" xnor Q_1;
 compare_LED <= compare_LED_vector(0) and compare_LED_vector(1) and compare_LED_vector(2) and compare_LED_vector(3) 
 and compare_LED_vector(4) and compare_LED_vector(5) and compare_LED_vector(6) and compare_LED_vector(7);    
-    
-    
-    SHIFTREG_test: my_pashiftreg_sclr generic map(N=>8,DIR=>"RIGHT")
-    port map(clock=>clock,resetn=>resetn,din=>k_in,E=>Etest,sclr=>'0',s_l=>LR,D=>"00000000",Q=>test);
     
 end Behavioral;
