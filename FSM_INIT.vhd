@@ -4,7 +4,7 @@ use ieee.std_logic_unsigned.all;
 
 entity FSM_INIT is
 	port (clock, resetn, s, so,zC,zC1,zQ,fall_edge,zD1,zD2,compare : in std_logic; 
-	      LR,ER,EC,EQ,ED1,ED2,EC1,ER1,k_line : out std_logic);
+	      LR,ER,EC,EQ,ED1,ED2,EC1,ER1,k_line,S_PID : out std_logic);
 end FSM_INIT;
 
 architecture behaviour of FSM_INIT is
@@ -128,7 +128,7 @@ begin
                 else EC1 <= '1'; 
                 end if;
             when S18 => k_line <= '1';
-                 if zC1 = '1' then EC1 <= '1'; else EC1 <= '1'; end if; 
+                 if zC1 = '1' then EC1 <= '1'; S_PID <= '1'; else EC1 <= '1'; end if; 
 end case;
 	end process;
 end behaviour;
