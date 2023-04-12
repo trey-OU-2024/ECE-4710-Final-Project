@@ -55,7 +55,7 @@ end component;
 signal EQ,ZQ,EC,EC1,zC,zC1,ED1,ED2,zD1,zD2,so_1,LR,ER,ER1,compare,fall_edge,so,
 S_PID,E_SEC,Z_SEC,E48,z48,PID,E_Req,L_Req,E_Sync,E_Sel,E_Res: std_logic;
 signal Q_1,Q_2,compare_vector,compare_LED_vector : std_logic_vector(7 downto 0);
-signal D_Store : std_logic_vector(47 downto 0);
+signal D_Store,mux_out : std_logic_vector(47 downto 0);
 signal SEL_PID : std_logic_vector(1 downto 0);
 signal E_Store : std_logic_vector(3 downto 0);
 begin
@@ -94,19 +94,19 @@ REG: my_rege generic map(N=>8)
     port map(clock=>clock,resetn=>resetn,E=>ER1,sclr=>'0',D=>Q_1,Q=>Q_2);
     
 REG_STORE0: my_rege generic map(N=>8)
-    port map(clock=>clock,resetn=>resetn,E=>E_Store(0),sclr=>'0',D=>D_Store(31 downto 24),Q=>Q_Store0);
+    port map(clock=>clock,resetn=>resetn,E=>E_Store(0),sclr=>'0',D=>D_Store(15 downto 8),Q=>Q_Store0);
 REG_STORE1: my_rege generic map(N=>8)
-    port map(clock=>clock,resetn=>resetn,E=>E_Store(1),sclr=>'0',D=>D_Store(23 downto 16),Q=>Q_Store1);
+    port map(clock=>clock,resetn=>resetn,E=>E_Store(1),sclr=>'0',D=>D_Store(15 downto 8),Q=>Q_Store1);
 REG_STORE2: my_rege generic map(N=>8)
     port map(clock=>clock,resetn=>resetn,E=>E_Store(2),sclr=>'0',D=>D_Store(15 downto 8),Q=>Q_Store2);
 REG_STORE3: my_rege generic map(N=>8)
-    port map(clock=>clock,resetn=>resetn,E=>E_Store(3),sclr=>'0',D=>D_Store(7 downto 0),Q=>Q_Store3);
-DEC: mydec2to4 port map(w=>SEL_PID, E=>E_Sync ,y=>E_Store)
+    port map(clock=>clock,resetn=>resetn,E=>E_Store(3),sclr=>'0',D=>D_Store(15 downto 8),Q=>Q_Store3);
+DEC: mydec2to4 port map(w=>SEL_PID, E=>E_Sync ,y=>E_Store);
 with SEL_PID select
     mux_out <= "0xC90501F16A68" when "00",
-                ""              when "01",
-                ""              when "10",
-                ""              when others;                     
+               "0xD10D01F16A68" when "01",
+               "0xE01C01F16A68" when "10",
+                "E31F01F16A68"  when others;                     
 compare_vector <= Q_2 xnor Q_1;
 compare <= compare_vector(0) and compare_vector(1) and compare_vector(2) and compare_vector(3) and compare_vector(4) and compare_vector(5) and compare_vector(6) and compare_vector(7);    
 
