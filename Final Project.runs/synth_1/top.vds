@@ -1,0 +1,616 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Wed Apr 12 17:40:53 2023
+# Process ID: 412
+# Current directory: C:/ECE4710/Final Project/Final Project.runs/synth_1
+# Command line: vivado.exe -log top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source top.tcl
+# Log file: C:/ECE4710/Final Project/Final Project.runs/synth_1/top.vds
+# Journal file: C:/ECE4710/Final Project/Final Project.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source top.tcl -notrace
+Command: synth_design -top top -part xc7a100tcsg324-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a100t'
+INFO: [Device 21-403] Loading part xc7a100tcsg324-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 9736 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 716.953 ; gain = 178.223
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [C:/ECE4710/Final Project/top.vhd:17]
+INFO: [Synth 8-3491] module 'FSM_INIT' declared at 'C:/ECE4710/Final Project/FSM_INIT.vhd:5' bound to instance 'FSM' of component 'FSM_INIT' [C:/ECE4710/Final Project/top.vhd:75]
+INFO: [Synth 8-638] synthesizing module 'FSM_INIT' [C:/ECE4710/Final Project/FSM_INIT.vhd:10]
+INFO: [Synth 8-256] done synthesizing module 'FSM_INIT' (1#1) [C:/ECE4710/Final Project/FSM_INIT.vhd:10]
+INFO: [Synth 8-3491] module 'FSM_PID' declared at 'C:/ECE4710/Final Project/FSM_PID.vhd:4' bound to instance 'FSM1' of component 'FSM_PID' [C:/ECE4710/Final Project/top.vhd:77]
+INFO: [Synth 8-638] synthesizing module 'FSM_PID' [C:/ECE4710/Final Project/FSM_PID.vhd:9]
+INFO: [Synth 8-256] done synthesizing module 'FSM_PID' (2#1) [C:/ECE4710/Final Project/FSM_PID.vhd:9]
+	Parameter COUNT bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'my_genpulse_sclr' declared at 'C:/ECE4710/Final Project/my_genpulse_sclr.vhd:18' bound to instance 'COUNT0' of component 'my_genpulse_sclr' [C:/ECE4710/Final Project/top.vhd:85]
+INFO: [Synth 8-638] synthesizing module 'my_genpulse_sclr' [C:/ECE4710/Final Project/my_genpulse_sclr.vhd:26]
+	Parameter COUNT bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'my_genpulse_sclr' (3#1) [C:/ECE4710/Final Project/my_genpulse_sclr.vhd:26]
+	Parameter COUNT bound to: 20000000 - type: integer 
+INFO: [Synth 8-3491] module 'my_genpulse_sclr' declared at 'C:/ECE4710/Final Project/my_genpulse_sclr.vhd:18' bound to instance 'COUNT1' of component 'my_genpulse_sclr' [C:/ECE4710/Final Project/top.vhd:87]
+INFO: [Synth 8-638] synthesizing module 'my_genpulse_sclr__parameterized1' [C:/ECE4710/Final Project/my_genpulse_sclr.vhd:26]
+	Parameter COUNT bound to: 20000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'my_genpulse_sclr__parameterized1' (3#1) [C:/ECE4710/Final Project/my_genpulse_sclr.vhd:26]
+	Parameter COUNT bound to: 9615 - type: integer 
+INFO: [Synth 8-3491] module 'my_genpulse_sclr' declared at 'C:/ECE4710/Final Project/my_genpulse_sclr.vhd:18' bound to instance 'COUNT2' of component 'my_genpulse_sclr' [C:/ECE4710/Final Project/top.vhd:89]
+INFO: [Synth 8-638] synthesizing module 'my_genpulse_sclr__parameterized3' [C:/ECE4710/Final Project/my_genpulse_sclr.vhd:26]
+	Parameter COUNT bound to: 9615 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'my_genpulse_sclr__parameterized3' (3#1) [C:/ECE4710/Final Project/my_genpulse_sclr.vhd:26]
+	Parameter COUNT bound to: 4808 - type: integer 
+INFO: [Synth 8-3491] module 'my_genpulse_sclr' declared at 'C:/ECE4710/Final Project/my_genpulse_sclr.vhd:18' bound to instance 'COUNT3' of component 'my_genpulse_sclr' [C:/ECE4710/Final Project/top.vhd:91]
+INFO: [Synth 8-638] synthesizing module 'my_genpulse_sclr__parameterized5' [C:/ECE4710/Final Project/my_genpulse_sclr.vhd:26]
+	Parameter COUNT bound to: 4808 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'my_genpulse_sclr__parameterized5' (3#1) [C:/ECE4710/Final Project/my_genpulse_sclr.vhd:26]
+	Parameter COUNT bound to: 1000000 - type: integer 
+INFO: [Synth 8-3491] module 'my_genpulse_sclr' declared at 'C:/ECE4710/Final Project/my_genpulse_sclr.vhd:18' bound to instance 'COUNT4' of component 'my_genpulse_sclr' [C:/ECE4710/Final Project/top.vhd:93]
+INFO: [Synth 8-638] synthesizing module 'my_genpulse_sclr__parameterized7' [C:/ECE4710/Final Project/my_genpulse_sclr.vhd:26]
+	Parameter COUNT bound to: 1000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'my_genpulse_sclr__parameterized7' (3#1) [C:/ECE4710/Final Project/my_genpulse_sclr.vhd:26]
+	Parameter COUNT bound to: 100000000 - type: integer 
+INFO: [Synth 8-3491] module 'my_genpulse_sclr' declared at 'C:/ECE4710/Final Project/my_genpulse_sclr.vhd:18' bound to instance 'COUNT5' of component 'my_genpulse_sclr' [C:/ECE4710/Final Project/top.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'my_genpulse_sclr__parameterized9' [C:/ECE4710/Final Project/my_genpulse_sclr.vhd:26]
+	Parameter COUNT bound to: 100000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'my_genpulse_sclr__parameterized9' (3#1) [C:/ECE4710/Final Project/my_genpulse_sclr.vhd:26]
+	Parameter COUNT bound to: 48 - type: integer 
+INFO: [Synth 8-3491] module 'my_genpulse_sclr' declared at 'C:/ECE4710/Final Project/my_genpulse_sclr.vhd:18' bound to instance 'COUNT6' of component 'my_genpulse_sclr' [C:/ECE4710/Final Project/top.vhd:97]
+INFO: [Synth 8-638] synthesizing module 'my_genpulse_sclr__parameterized11' [C:/ECE4710/Final Project/my_genpulse_sclr.vhd:26]
+	Parameter COUNT bound to: 48 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'my_genpulse_sclr__parameterized11' (3#1) [C:/ECE4710/Final Project/my_genpulse_sclr.vhd:26]
+	Parameter COUNT bound to: 4 - type: integer 
+INFO: [Synth 8-3491] module 'my_genpulse_sclr' declared at 'C:/ECE4710/Final Project/my_genpulse_sclr.vhd:18' bound to instance 'COUNT7' of component 'my_genpulse_sclr' [C:/ECE4710/Final Project/top.vhd:99]
+INFO: [Synth 8-638] synthesizing module 'my_genpulse_sclr__parameterized13' [C:/ECE4710/Final Project/my_genpulse_sclr.vhd:26]
+	Parameter COUNT bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'my_genpulse_sclr__parameterized13' (3#1) [C:/ECE4710/Final Project/my_genpulse_sclr.vhd:26]
+	Parameter COUNT bound to: 9615 - type: integer 
+INFO: [Synth 8-3491] module 'my_genpulse_sclr' declared at 'C:/ECE4710/Final Project/my_genpulse_sclr.vhd:18' bound to instance 'COUNT2_PID' of component 'my_genpulse_sclr' [C:/ECE4710/Final Project/top.vhd:102]
+	Parameter COUNT bound to: 4808 - type: integer 
+INFO: [Synth 8-3491] module 'my_genpulse_sclr' declared at 'C:/ECE4710/Final Project/my_genpulse_sclr.vhd:18' bound to instance 'COUNT3_PID' of component 'my_genpulse_sclr' [C:/ECE4710/Final Project/top.vhd:104]
+	Parameter COUNT bound to: 1000000 - type: integer 
+INFO: [Synth 8-3491] module 'my_genpulse_sclr' declared at 'C:/ECE4710/Final Project/my_genpulse_sclr.vhd:18' bound to instance 'COUNT4_PID' of component 'my_genpulse_sclr' [C:/ECE4710/Final Project/top.vhd:106]
+	Parameter N bound to: 8 - type: integer 
+	Parameter DIR bound to: RIGHT - type: string 
+INFO: [Synth 8-3491] module 'my_pashiftreg_sclr' declared at 'C:/ECE4710/Final Project/my_pashiftreg_sclr.vhd:19' bound to instance 'SHIFTREG_INIT' of component 'my_pashiftreg_sclr' [C:/ECE4710/Final Project/top.vhd:110]
+INFO: [Synth 8-638] synthesizing module 'my_pashiftreg_sclr' [C:/ECE4710/Final Project/my_pashiftreg_sclr.vhd:29]
+	Parameter N bound to: 8 - type: integer 
+	Parameter DIR bound to: RIGHT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'my_pashiftreg_sclr' (4#1) [C:/ECE4710/Final Project/my_pashiftreg_sclr.vhd:29]
+	Parameter N bound to: 48 - type: integer 
+	Parameter DIR bound to: RIGHT - type: string 
+INFO: [Synth 8-3491] module 'my_pashiftreg_sclr' declared at 'C:/ECE4710/Final Project/my_pashiftreg_sclr.vhd:19' bound to instance 'SHIFTREG_PID_REQ' of component 'my_pashiftreg_sclr' [C:/ECE4710/Final Project/top.vhd:112]
+INFO: [Synth 8-638] synthesizing module 'my_pashiftreg_sclr__parameterized1' [C:/ECE4710/Final Project/my_pashiftreg_sclr.vhd:29]
+	Parameter N bound to: 48 - type: integer 
+	Parameter DIR bound to: RIGHT - type: string 
+INFO: [Synth 8-256] done synthesizing module 'my_pashiftreg_sclr__parameterized1' (4#1) [C:/ECE4710/Final Project/my_pashiftreg_sclr.vhd:29]
+	Parameter N bound to: 48 - type: integer 
+	Parameter DIR bound to: RIGHT - type: string 
+INFO: [Synth 8-3491] module 'my_pashiftreg_sclr' declared at 'C:/ECE4710/Final Project/my_pashiftreg_sclr.vhd:19' bound to instance 'SHIFTREG_PID_RES' of component 'my_pashiftreg_sclr' [C:/ECE4710/Final Project/top.vhd:114]
+INFO: [Synth 8-3491] module 'Falling_edge_detector' declared at 'C:/ECE4710/Final Project/Falling_edge_detector.vhd:4' bound to instance 'EDGE' of component 'Falling_edge_detector' [C:/ECE4710/Final Project/top.vhd:117]
+INFO: [Synth 8-638] synthesizing module 'Falling_edge_detector' [C:/ECE4710/Final Project/Falling_edge_detector.vhd:9]
+INFO: [Synth 8-256] done synthesizing module 'Falling_edge_detector' (5#1) [C:/ECE4710/Final Project/Falling_edge_detector.vhd:9]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'my_rege' declared at 'C:/ECE4710/Final Project/my_rege.vhd:17' bound to instance 'REG' of component 'my_rege' [C:/ECE4710/Final Project/top.vhd:118]
+INFO: [Synth 8-638] synthesizing module 'my_rege' [C:/ECE4710/Final Project/my_rege.vhd:25]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'my_rege' (6#1) [C:/ECE4710/Final Project/my_rege.vhd:25]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'my_rege' declared at 'C:/ECE4710/Final Project/my_rege.vhd:17' bound to instance 'REG_STORE0' of component 'my_rege' [C:/ECE4710/Final Project/top.vhd:121]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'my_rege' declared at 'C:/ECE4710/Final Project/my_rege.vhd:17' bound to instance 'REG_STORE1' of component 'my_rege' [C:/ECE4710/Final Project/top.vhd:123]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'my_rege' declared at 'C:/ECE4710/Final Project/my_rege.vhd:17' bound to instance 'REG_STORE2' of component 'my_rege' [C:/ECE4710/Final Project/top.vhd:125]
+	Parameter N bound to: 8 - type: integer 
+INFO: [Synth 8-3491] module 'my_rege' declared at 'C:/ECE4710/Final Project/my_rege.vhd:17' bound to instance 'REG_STORE3' of component 'my_rege' [C:/ECE4710/Final Project/top.vhd:127]
+INFO: [Synth 8-3491] module 'mydec2to4' declared at 'C:/ECE4710/Final Project/mydec2to4.vhd:34' bound to instance 'DEC' of component 'mydec2to4' [C:/ECE4710/Final Project/top.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'mydec2to4' [C:/ECE4710/Final Project/mydec2to4.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'mydec2to4' (7#1) [C:/ECE4710/Final Project/mydec2to4.vhd:40]
+INFO: [Synth 8-3491] module 'serializer' declared at 'C:/ECE4710/Final Project/serializer.vhd:17' bound to instance 'display0' of component 'serializer' [C:/ECE4710/Final Project/top.vhd:148]
+INFO: [Synth 8-638] synthesizing module 'serializer' [C:/ECE4710/Final Project/serializer.vhd:24]
+	Parameter COUNT bound to: 100000 - type: integer 
+INFO: [Synth 8-3491] module 'my_genpulse_sclr' declared at 'C:/ECE4710/Final Project/my_genpulse_sclr.vhd:18' bound to instance 'gz' of component 'my_genpulse_sclr' [C:/ECE4710/Final Project/serializer.vhd:52]
+INFO: [Synth 8-638] synthesizing module 'my_genpulse_sclr__parameterized15' [C:/ECE4710/Final Project/my_genpulse_sclr.vhd:26]
+	Parameter COUNT bound to: 100000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'my_genpulse_sclr__parameterized15' (7#1) [C:/ECE4710/Final Project/my_genpulse_sclr.vhd:26]
+INFO: [Synth 8-3491] module 'hex2sevenseg' declared at 'C:/ECE4710/Final Project/hex2sevenseg.vhd:15' bound to instance 'seg7' of component 'hex2sevenseg' [C:/ECE4710/Final Project/serializer.vhd:62]
+INFO: [Synth 8-638] synthesizing module 'hex2sevenseg' [C:/ECE4710/Final Project/hex2sevenseg.vhd:20]
+INFO: [Synth 8-226] default block is never used [C:/ECE4710/Final Project/hex2sevenseg.vhd:28]
+INFO: [Synth 8-256] done synthesizing module 'hex2sevenseg' (8#1) [C:/ECE4710/Final Project/hex2sevenseg.vhd:20]
+INFO: [Synth 8-226] default block is never used [C:/ECE4710/Final Project/serializer.vhd:68]
+INFO: [Synth 8-256] done synthesizing module 'serializer' (9#1) [C:/ECE4710/Final Project/serializer.vhd:24]
+INFO: [Synth 8-256] done synthesizing module 'top' (10#1) [C:/ECE4710/Final Project/top.vhd:17]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 781.887 ; gain = 243.156
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 781.887 ; gain = 243.156
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 781.887 ; gain = 243.156
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/ECE4710/Final Project/FinalProj.xdc]
+Finished Parsing XDC File [C:/ECE4710/Final Project/FinalProj.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/ECE4710/Final Project/FinalProj.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 905.402 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 905.402 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 905.402 ; gain = 366.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a100tcsg324-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 905.402 ; gain = 366.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:11 . Memory (MB): peak = 905.402 ; gain = 366.672
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'y_reg' in module 'FSM_INIT'
+INFO: [Synth 8-802] inferred FSM for state register 'y_reg' in module 'FSM_PID'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      s1 |                            00000 |                            00000
+                      s2 |                            00001 |                            00001
+                      s3 |                            00010 |                            00010
+                      s4 |                            00011 |                            00011
+                      s5 |                            00100 |                            00100
+                      s6 |                            00101 |                            00101
+                      s7 |                            00110 |                            00110
+                      s8 |                            00111 |                            00111
+                      s9 |                            01000 |                            01000
+                     s10 |                            01001 |                            01001
+                     s11 |                            01010 |                            01010
+                     s12 |                            01011 |                            01011
+                     s13 |                            01100 |                            01100
+                     s14 |                            01101 |                            01101
+                     s15 |                            01110 |                            01110
+                     s16 |                            01111 |                            01111
+                     s17 |                            10000 |                            10000
+                     s18 |                            10001 |                            10001
+                     s19 |                            10010 |                            10010
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'y_reg' using encoding 'sequential' in module 'FSM_INIT'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                      s1 |                       0000000001 |                             0000
+                      s2 |                       0000000010 |                             0001
+                      s3 |                       0000000100 |                             0010
+                      s4 |                       0000001000 |                             0011
+                      s5 |                       0000010000 |                             0100
+                      s6 |                       0000100000 |                             0101
+                      s7 |                       0001000000 |                             0110
+                      s8 |                       0010000000 |                             0111
+                      s9 |                       0100000000 |                             1000
+                     s10 |                       1000000000 |                             1001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'y_reg' using encoding 'one-hot' in module 'FSM_PID'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 905.402 ; gain = 366.672
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     27 Bit       Adders := 1     
+	   2 Input     25 Bit       Adders := 1     
+	   2 Input     20 Bit       Adders := 2     
+	   2 Input     17 Bit       Adders := 1     
+	   2 Input     14 Bit       Adders := 2     
+	   2 Input     13 Bit       Adders := 2     
+	   2 Input      6 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
+	   2 Input      2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      8 Bit         XORs := 2     
++---Registers : 
+	               48 Bit    Registers := 2     
+	               27 Bit    Registers := 1     
+	               25 Bit    Registers := 1     
+	               20 Bit    Registers := 2     
+	               17 Bit    Registers := 1     
+	               14 Bit    Registers := 2     
+	               13 Bit    Registers := 2     
+	                8 Bit    Registers := 6     
+	                6 Bit    Registers := 1     
+	                3 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     48 Bit        Muxes := 4     
+	   4 Input     48 Bit        Muxes := 1     
+	   2 Input     27 Bit        Muxes := 2     
+	   2 Input     25 Bit        Muxes := 2     
+	   2 Input     20 Bit        Muxes := 4     
+	   2 Input     17 Bit        Muxes := 2     
+	   2 Input     14 Bit        Muxes := 4     
+	   2 Input     13 Bit        Muxes := 4     
+	  10 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 12    
+	   2 Input      8 Bit        Muxes := 7     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 2     
+	  19 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 22    
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 3     
+	   2 Input      3 Bit        Muxes := 2     
+	   2 Input      2 Bit        Muxes := 2     
+	   7 Input      2 Bit        Muxes := 1     
+	  19 Input      1 Bit        Muxes := 10    
+	  10 Input      1 Bit        Muxes := 7     
+	   2 Input      1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module top 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      8 Bit         XORs := 2     
++---Muxes : 
+	   4 Input     48 Bit        Muxes := 1     
+	   4 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module FSM_INIT 
+Detailed RTL Component Info : 
++---Muxes : 
+	  19 Input      5 Bit        Muxes := 1     
+	   2 Input      5 Bit        Muxes := 22    
+	  19 Input      1 Bit        Muxes := 10    
+Module FSM_PID 
+Detailed RTL Component Info : 
++---Muxes : 
+	  10 Input     10 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 12    
+	  10 Input      1 Bit        Muxes := 7     
+Module my_genpulse_sclr 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      3 Bit       Adders := 1     
++---Registers : 
+	                3 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      3 Bit        Muxes := 2     
+Module my_genpulse_sclr__parameterized1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     25 Bit       Adders := 1     
++---Registers : 
+	               25 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     25 Bit        Muxes := 2     
+Module my_genpulse_sclr__parameterized3 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     14 Bit       Adders := 1     
++---Registers : 
+	               14 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     14 Bit        Muxes := 2     
+Module my_genpulse_sclr__parameterized5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     13 Bit       Adders := 1     
++---Registers : 
+	               13 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     13 Bit        Muxes := 2     
+Module my_genpulse_sclr__parameterized7 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     20 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     20 Bit        Muxes := 2     
+Module my_genpulse_sclr__parameterized9 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     27 Bit       Adders := 1     
++---Registers : 
+	               27 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     27 Bit        Muxes := 2     
+Module my_genpulse_sclr__parameterized11 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	                6 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      6 Bit        Muxes := 2     
+Module my_genpulse_sclr__parameterized13 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      2 Bit       Adders := 1     
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 2     
+Module my_pashiftreg_sclr 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
+Module my_pashiftreg_sclr__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	               48 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     48 Bit        Muxes := 2     
+Module Falling_edge_detector 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module my_rege 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+Module mydec2to4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+Module my_genpulse_sclr__parameterized15 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     17 Bit       Adders := 1     
++---Registers : 
+	               17 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     17 Bit        Muxes := 2     
+Module serializer 
+Detailed RTL Component Info : 
++---Registers : 
+	                2 Bit    Registers := 1     
++---Muxes : 
+	   4 Input      4 Bit        Muxes := 2     
+	   7 Input      2 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3917] design top has port AN[7] driven by constant 1
+WARNING: [Synth 8-3917] design top has port AN[6] driven by constant 1
+WARNING: [Synth 8-3917] design top has port AN[5] driven by constant 1
+WARNING: [Synth 8-3917] design top has port AN[4] driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 905.402 ; gain = 366.672
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 905.402 ; gain = 366.672
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:23 . Memory (MB): peak = 926.195 ; gain = 387.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 926.195 ; gain = 387.465
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 928.445 ; gain = 389.715
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 928.445 ; gain = 389.715
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 928.445 ; gain = 389.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 928.445 ; gain = 389.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 928.445 ; gain = 389.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 928.445 ; gain = 389.715
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    45|
+|3     |LUT1   |     2|
+|4     |LUT2   |   188|
+|5     |LUT3   |    48|
+|6     |LUT4   |    53|
+|7     |LUT5   |    27|
+|8     |LUT6   |    72|
+|9     |FDCE   |   327|
+|10    |FDPE   |     1|
+|11    |IBUF   |     6|
+|12    |OBUF   |    17|
++------+-------+------+
+
+Report Instance Areas: 
++------+-------------------+-------------------------------------+------+
+|      |Instance           |Module                               |Cells |
++------+-------------------+-------------------------------------+------+
+|1     |top                |                                     |   787|
+|2     |  COUNT0           |my_genpulse_sclr                     |     8|
+|3     |  COUNT1           |my_genpulse_sclr__parameterized1     |    65|
+|4     |  COUNT2           |my_genpulse_sclr__parameterized3     |    38|
+|5     |  COUNT2_PID       |my_genpulse_sclr__parameterized3_0   |    36|
+|6     |  COUNT3           |my_genpulse_sclr__parameterized5     |    36|
+|7     |  COUNT3_PID       |my_genpulse_sclr__parameterized5_1   |    34|
+|8     |  COUNT4           |my_genpulse_sclr__parameterized7     |    51|
+|9     |  COUNT4_PID       |my_genpulse_sclr__parameterized7_2   |    50|
+|10    |  COUNT5           |my_genpulse_sclr__parameterized9     |    83|
+|11    |  COUNT6           |my_genpulse_sclr__parameterized11    |    13|
+|12    |  COUNT7           |my_genpulse_sclr__parameterized13    |    15|
+|13    |  EDGE             |Falling_edge_detector                |     2|
+|14    |  FSM              |FSM_INIT                             |    56|
+|15    |  FSM1             |FSM_PID                              |    27|
+|16    |  REG              |my_rege                              |    14|
+|17    |  REG_STORE0       |my_rege_3                            |    12|
+|18    |  REG_STORE1       |my_rege_4                            |    12|
+|19    |  REG_STORE2       |my_rege_5                            |    23|
+|20    |  REG_STORE3       |my_rege_6                            |    12|
+|21    |  SHIFTREG_INIT    |my_pashiftreg_sclr                   |    10|
+|22    |  SHIFTREG_PID_REQ |my_pashiftreg_sclr__parameterized1   |    74|
+|23    |  SHIFTREG_PID_RES |my_pashiftreg_sclr__parameterized1_7 |    40|
+|24    |  display0         |serializer                           |    52|
+|25    |    gz             |my_genpulse_sclr__parameterized15    |    46|
++------+-------------------+-------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 928.445 ; gain = 389.715
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 4 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 928.445 ; gain = 266.199
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:26 . Memory (MB): peak = 928.445 ; gain = 389.715
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 45 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 947.512 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+82 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:32 . Memory (MB): peak = 947.512 ; gain = 652.480
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 947.512 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'C:/ECE4710/Final Project/Final Project.runs/synth_1/top.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_utilization_synth.rpt -pb top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 12 17:41:28 2023...

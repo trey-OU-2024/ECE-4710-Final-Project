@@ -1,0 +1,92 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Apr  7 20:06:32 2023
+# Process ID: 23728
+# Current directory: C:/ECE4710/Final Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19756 C:\ECE4710\Final Project\Final Project.xpr
+# Log file: C:/ECE4710/Final Project/vivado.log
+# Journal file: C:/ECE4710/Final Project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/ECE4710/Final Project/Final Project.xpr}
+CRITICAL WARNING: [Project 1-19] Could not find the file 'C:/ECE4710/Final Project/Final Project.srcs/sources_1/new/FSM_INIT.v'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.1/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:07 . Memory (MB): peak = 725.234 ; gain = 101.527
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Fri Apr  7 20:15:17 2023] Launched synth_1...
+Run output will be captured here: C:/ECE4710/Final Project/Final Project.runs/synth_1/runme.log
+add_files -norecurse {{C:/ECE4710/Final Project/FSM_INIT.vhd}}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files {{C:/ECE4710/Final Project/Final Project.srcs/sources_1/new/FSM_INIT.v}}] -no_script -reset -force -quiet
+remove_files  {{C:/ECE4710/Final Project/Final Project.srcs/sources_1/new/FSM_INIT.v}}
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Fri Apr  7 20:17:49 2023] Launched synth_1...
+Run output will be captured here: C:/ECE4710/Final Project/Final Project.runs/synth_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Fri Apr  7 20:43:38 2023] Launched synth_1...
+Run output will be captured here: C:/ECE4710/Final Project/Final Project.runs/synth_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Fri Apr  7 20:44:25 2023] Launched impl_1...
+Run output will be captured here: C:/ECE4710/Final Project/Final Project.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2019.1
+  **** Build date : May 24 2019 at 15:13:31
+    ** Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 813.980 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292B40AE2A
+set_property PROGRAM.FILE {C:/ECE4710/Final Project/Final Project.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+current_hw_device [get_hw_devices xc7a100t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/ECE4710/Final Project/Final Project.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292B40AE2A
+reset_run synth_1
+launch_runs synth_1 -jobs 4
+[Fri Apr  7 21:03:14 2023] Launched synth_1...
+Run output will be captured here: C:/ECE4710/Final Project/Final Project.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 4
+[Fri Apr  7 21:04:30 2023] Launched impl_1...
+Run output will be captured here: C:/ECE4710/Final Project/Final Project.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Fri Apr  7 21:06:54 2023] Launched impl_1...
+Run output will be captured here: C:/ECE4710/Final Project/Final Project.runs/impl_1/runme.log
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292B40AE2A
+INFO: [Labtools 27-1435] Device xc7a100t (JTAG device index = 0) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a100t_0]
+set_property PROGRAM.FILE {C:/ECE4710/Final Project/Final Project.runs/impl_1/top.bit} [get_hw_devices xc7a100t_0]
+program_hw_devices [get_hw_devices xc7a100t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a100t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a100t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210292B40AE2A
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Apr  7 22:03:36 2023...
