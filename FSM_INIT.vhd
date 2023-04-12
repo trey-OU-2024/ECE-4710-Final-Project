@@ -8,7 +8,7 @@ entity FSM_INIT is
 end FSM_INIT;
 
 architecture behaviour of FSM_INIT is
-	type state is (S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18);
+	type state is (S1, S2, S3, S4, S5, S6, S7, S8, S9, S10, S11, S12, S13, S14, S15, S16, S17, S18, S19);
 	signal y: state;
 	
 
@@ -72,7 +72,8 @@ begin
 				    else y <= S17; 
 				    end if;
 			    when S18 =>
-			         if zC1 = '1' then y <= S1; else y <= S18; end if;    
+			         if zC1 = '1' then y <= S19; else y <= S18; end if; 
+			    when S19 => y <= S19;   
 			end case;
 		end if;		
 	end process;
@@ -128,7 +129,8 @@ begin
                 else EC1 <= '1'; 
                 end if;
             when S18 => k_line <= '1';
-                 if zC1 = '1' then EC1 <= '1'; S_PID <= '1'; else EC1 <= '1'; end if; 
+                 if zC1 = '1' then EC1 <= '1'; else EC1 <= '1'; end if; 
+            when S19 => k_line <= '1'; S_PID <= '1';
 end case;
 	end process;
 end behaviour;
